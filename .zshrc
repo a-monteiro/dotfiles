@@ -215,3 +215,8 @@ if [ -f '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias config='/usr/bin/git --git-dir=/Users/andre/.cfg/ --work-tree=/Users/andre'
+
+
+# Fix for _p9k_worker_stop:5: failed to close file descriptor 13: bad file descriptor
+unset ZSH_AUTOSUGGEST_USE_ASYNC
+
