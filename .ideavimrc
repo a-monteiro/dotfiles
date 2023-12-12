@@ -1,5 +1,13 @@
 source ~/.vimrc
+set which-key
+nnoremap <Space>wv :vertical splitv<CR>
+nnoremap <Space>ws :split<CR>
+nnoremap <Space>wd :close<CR>
+
 let mapleader=" "
+set notimeout
+let g:WhichKey_ShowVimActions = "true"
+"set timeoutlen=500
 
 set showmode
 set relativenumber number
@@ -14,13 +22,6 @@ nmap <leader>f :action Forward<cr>
 nmap <Leader>pu :action Vcs.Push<cr>
 nmap <leader>p :action GotoFile<cr>
 "nmap <leader>y :action ExpressionTypeInfo<cr>
-
-
-""" KJump plugin  --------------------------------
-"nmap <leader><leader>s :action KJumpAction<cr>
-"nmap <leader><leader>w :action KJumpAction.Word0<cr>
-"nmap <leader><leader>l :actifon KJumpApction.Line<cr>
-
 
 """ Editing and Reloading the Config
 set clipboard+=unnamed
