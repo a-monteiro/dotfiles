@@ -5,27 +5,16 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # yabai -m signal --add event=space_changed action="~/.config/yabai/maintain_paired_spaces.sh"
 
 # global settings
-# yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          on
+yabai -m config focus_follows_mouse          autoraise
 yabai -m config window_origin_display        default
-yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
 yabai -m config window_shadow                on
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                off
-yabai -m config window_border_width          6
-yabai -m config active_window_border_color   0xff775759
-yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xffd75f5f
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 off
-yabai -m config mouse_modifier               fn
-yabai -m config mouse_action1                move
-yabai -m config mouse_action2                resize
-yabai -m config mouse_drop_action            swap
 
 # Binary space partitioning. stack or float
 yabai -m config layout bsp
@@ -41,43 +30,29 @@ yabai -m config right_padding 10
 yabai -m config window_gap 10
 
 # mouse settings
-# yabai -m config mouse_follows_focus on
 yabai -m config mouse_modifier alt
 
 # left click + drag will move window
 yabai -m config mouse_action1 move
+
 # right click + drag will resize the window
 yabai -m config mouse_action2 resize
 
 # swap windows when dragging windows to the center of another
-yabai -m mouse_drop_action swap
+yabai -m config mouse_drop_action swap
 
 # SETUP SPACES
 # python3 ./.config/yabai/yabaictl.py update-spaces
 
+#Display 1 - Dell
+#Display 2 - Laptop
+#Display 3 - ASUS
 yabai -m space 1 --label main --display 1
 yabai -m space 2 --label code --display 1
-yabai -m space code --move next
 yabai -m space 3 --label term --display 1
-yabai -m space term --move next
-yabai -m space term --move next
 yabai -m space 4 --label chat --display 2
 yabai -m space 5 --label spotify --display 2
-yabai -m space spotify --move next
 yabai -m space 6 --label other --display 3
-
-# # Display 1 - Laptop
-# yabai -m space chat --display 1
-# yabai -m space spotify --display 1
-# # Display 2 - Dell
-# yabai -m space main --display 2
-# yabai -m space code --display 2
-# yabai -m space term --display 2
-# # Display 3 - Asus
-# yabai -m space other --display 3
-
-# yabai -m space chat --move next
-# yabai -m space spotify --move next
 
 # Disable mmgmt of specific apps
 yabai -m rule --add app="^System Settings$" manage=off
