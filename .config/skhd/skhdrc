@@ -62,12 +62,19 @@ shift + alt - 3 : yabai -m window --space term; yabai -m space --focus term
 shift + alt - 4 : yabai -m window --space chat; yabai -m space --focus chat
 shift + alt - 5 : yabai -m window --space spotify; yabai -m space --focus spotify
 shift + alt - 6 : yabai -m window --space other; yabai -m space --focus other
+shift + alt - 6 : yabai -m window --space other2; yabai -m space --focus other2
 
-
-shift + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
 shift + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
 shift + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
 
+
+ctrl - 1 : yabai -m space --focus main
+ctrl - 2 : yabai -m space --focus code
+ctrl - 3 : yabai -m space --focus term
+ctrl - 4 : yabai -m space --focus chat
+ctrl - 5 : yabai -m space --focus spotify
+ctrl - 6 : yabai -m space --focus other
+ctrl - 7 : yabai -m space --focus other2
 
 # ctrl - left : index=`yabai -m query --spaces --space | jq '.index'` &&\
 #                         if (($index != 1 && $index != 6 )) then\
