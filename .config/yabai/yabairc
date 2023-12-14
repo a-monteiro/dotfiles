@@ -63,6 +63,7 @@ yabai -m rule --add app="^Bitwarden$" manage=off
 yabai -m rule --add app="^LuLu$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^SpaceLauncher$" manage=off
+yabai -m rule --add app="^Captin$" manage=off
 
 
 JB_Apps='^(CLion|PyCharm|IntelliJ IDEA)$'
