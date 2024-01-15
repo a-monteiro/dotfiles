@@ -188,6 +188,7 @@ compdef _pipenv_completion pipenv;
 
 #eval "$(_PIPENV_COMPLTE=zsh_source pipenv)"
 export LANG=en_US.UTF-8
+export EDITOR=nvim
 # ALIASES
 alias zshconfig="vi ~/.zshrc"
 alias curl="curl -s -S"
