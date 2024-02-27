@@ -1,0 +1,23 @@
+[user]
+	name = André Monteiro
+	email = andre@dune.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[push]
+	autoSetupRemote = true
+[core]
+	autocrlf = input
+	excludesfile = /Users/andre/.gitignore
+	pager = cat
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[pager]
+	log = less -S
+	branch = false
