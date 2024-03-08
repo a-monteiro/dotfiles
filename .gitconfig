@@ -21,3 +21,5 @@
 [pager]
 	log = less -S
 	branch = false
+[rerere]
+	enabled = true
