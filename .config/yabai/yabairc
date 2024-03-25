@@ -99,6 +99,7 @@ yabai -m rule --add app=Linear space=other
 yabai -m rule --add app=Postman space=other
 yabai -m rule --add app=Notion space=other
 yabai -m rule --add app=Cron space=other
+yabai -m rule --add app="^Notion Calendar$" space=other
 
 # Spotify
 yabai -m rule --add app=Spotify space=spotify
