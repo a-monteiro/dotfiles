@@ -23,11 +23,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # padding
-yabai -m config top_padding 10
-yabai -m config bottom_padding 10
-yabai -m config left_padding 10
-yabai -m config right_padding 10
-yabai -m config window_gap 10
+yabai -m config top_padding 5
+yabai -m config bottom_padding 5
+yabai -m config left_padding 5
+yabai -m config right_padding 5
+yabai -m config window_gap 5
 
 # mouse settings
 yabai -m config mouse_modifier alt
@@ -52,8 +52,10 @@ yabai -m space 2 --label code --display 1
 yabai -m space 3 --label term --display 1
 yabai -m space 4 --label chat --display 2
 yabai -m space 5 --label spotify --display 2
-yabai -m space 6 --label other --display 3
-yabai -m space 7 --label other2 --display 3
+yabai -m space 6 --label chat2 --display 2
+yabai -m space 7 --label other --display 3
+yabai -m space 8 --label other2 --display 3
+yabai -m space 9 --label other3 --display 3
 
 # Disable mmgmt of specific apps
 yabai -m rule --add app="^System Settings$" manage=off
@@ -80,27 +82,27 @@ yabai -m rule --add app="^iTerm2$" space=^term
 # Code apps
 yabai -m rule --add app="^IntelliJ IDEA$" space=^code
 yabai -m rule --add app="^Android Studio$" space=^code
-yabai -m rule --add app=Code space=code
+yabai -m rule --add app=Code space=^code
 
 # Main apps
 yabai -m rule --add app="^Arc$"" space=^main
-yabai -m rule --add app="^Safari$" space=main
-yabai -m rule --add app="^Firefox$"" space=main
-yabai -m rule --add app="^Chrome$" space=main
+yabai -m rule --add app="^Safari$" space=^main
+yabai -m rule --add app="^Firefox$"" space=^main
+yabai -m rule --add app="^Chrome$" space=^main
 
 # Chat apps
 yabai -m rule --add app="^Slack$" space=^chat
-yabai -m rule --add app="^Discord$" space=chat
-yabai -m rule --add app="^Telegram$" space=chat
-yabai -m rule --add app="^Texty$" space=chat
+yabai -m rule --add app="^Discord$" space=^chat
+yabai -m rule --add app="^Telegram$" space=^chat
+yabai -m rule --add app="^Texty$" space=^chat
 
 # Other apps
-yabai -m rule --add app=Linear space=other
-yabai -m rule --add app=Postman space=other
-yabai -m rule --add app=Notion space=other
-yabai -m rule --add app=Cron space=other
-yabai -m rule --add app="^Notion Calendar$" space=other
+yabai -m rule --add app=Linear space=^other2
+yabai -m rule --add app=Postman space=^other2
+yabai -m rule --add app=Notion space=^other
+# yabai -m rule --add app=Cron space=^other
+yabai -m rule --add app="^Notion Calendar$" space=^other
 
 # Spotify
-yabai -m rule --add app=Spotify space=spotify
+yabai -m rule --add app=Spotify space=^spotify
  
