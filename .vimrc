@@ -1,23 +1,23 @@
 " Vundle
-set nocompatible              " be iMproved, required
+" set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-sleuth'
-Plugin 'bling/vim-airline'
-Plugin 'powerline/fonts'  " NB: still need to run the ./install.sh script for the fonts to actually get installed
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'hashivim/vim-terraform'
-Plugin 'juliosueiras/vim-terraform-completion'
-Plugin 'EvitanRelta/vim-colorschemes'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'easymotion/vim-easymotion'
+ Plugin 'VundleVim/Vundle.vim'
+ Plugin 'tpope/vim-sleuth'
+ Plugin 'bling/vim-airline'
+ Plugin 'powerline/fonts'  " NB: still need to run the ./install.sh script for the fonts to actually get installed
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'kien/ctrlp.vim'
+ Plugin 'scrooloose/syntastic.git'
+ Plugin 'hashivim/vim-terraform'
+ Plugin 'juliosueiras/vim-terraform-completion'
+ Plugin 'EvitanRelta/vim-colorschemes'
+ Plugin 'tpope/vim-surround'
+ Plugin 'tpope/vim-repeat'
+ Plugin 'easymotion/vim-easymotion'
 
 
 let mapleader = " " " map leader to Space
@@ -38,7 +38,7 @@ else
 endif
 
 
-call vundle#end()            " required
+all vundle#end()            " required
 filetype plugin indent on    " requirehow
 
 " Airline
@@ -103,3 +103,6 @@ map <leader>t :NERDTreeToggle<CR>
 
 nmap j gj
 nmap k gk
+
+vnoremap < <gv
+vnoremap > >gv
