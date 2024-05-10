@@ -217,6 +217,12 @@ if [ -f '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias config='/usr/bin/git --git-dir=/Users/andre/.cfg/ --work-tree=/Users/andre'
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export GOPRIVATE="github.com/duneanalytics/*,github.com/a-monteiro/*"
+
 
 # Fix for _p9k_worker_stop:5: failed to close file descriptor 13: bad file descriptor
 unset ZSH_AUTOSUGGEST_USE_ASYNC
