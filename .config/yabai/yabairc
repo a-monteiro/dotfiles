@@ -50,12 +50,13 @@ yabai -m config mouse_drop_action swap
 yabai -m space 1 --label main --display 1
 yabai -m space 2 --label code --display 1
 yabai -m space 3 --label term --display 1
-yabai -m space 4 --label chat --display 2
-yabai -m space 5 --label spotify --display 2
-yabai -m space 6 --label chat2 --display 2
-yabai -m space 7 --label other --display 3
-yabai -m space 8 --label other2 --display 3
-yabai -m space 9 --label other3 --display 3
+yabai -m space 4 --label zoom --display 1
+yabai -m space 5 --label chat --display 2
+yabai -m space 6 --label spotify --display 2
+yabai -m space 7 --label chat2 --display 2
+yabai -m space 8 --label other --display 3
+yabai -m space 9 --label other2 --display 3
+yabai -m space 10 --label other3 --display 3
 
 # Disable mmgmt of specific apps
 yabai -m rule --add app="^System Settings$" manage=off
@@ -90,6 +91,9 @@ yabai -m rule --add app="^Safari$" space=^main
 yabai -m rule --add app="^Firefox$"" space=^main
 yabai -m rule --add app="^Chrome$" space=^main
 
+# Zoom
+yabai -m rule --add app="^Zoom$" space=^zoom
+
 # Chat apps
 yabai -m rule --add app="^Slack$" space=^chat
 yabai -m rule --add app="^Discord$" space=^chat
@@ -100,7 +104,6 @@ yabai -m rule --add app="^Texty$" space=^chat
 yabai -m rule --add app=Linear space=^other2
 yabai -m rule --add app=Postman space=^other2
 yabai -m rule --add app=Notion space=^other
-# yabai -m rule --add app=Cron space=^other
 yabai -m rule --add app="^Notion Calendar$" space=^other
 
 # Spotify
