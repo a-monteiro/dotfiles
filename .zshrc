@@ -63,7 +63,7 @@ bindkey "^I" expand-or-complete-with-dots
 
 unalias gsts
 
-export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${PATH}:${HOME}/.krew/bin:/Users/andre/.local/bin"
 
 function awslogin {
  gsts --force --aws-region eu-west-1 --aws-role-arn arn:aws:iam::118330671040:role/SSOAdministrator --sp-id 362114136470 --idp-id C02k0bpbn --json --aws-profile=default --aws-shared-credentials-file /Users/andre/.aws/gsts-credentials
@@ -209,12 +209,6 @@ compdef _gt_yargs_completions gt
 export JAVA_HOME=$(/usr/libexec/java_home)
 #unsetopt XTRACE
 #exec 2>&3 3>&-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias config='/usr/bin/git --git-dir=/Users/andre/.cfg/ --work-tree=/Users/andre'
 
 export NVM_DIR="$HOME/.nvm"
@@ -227,3 +221,9 @@ export GOPRIVATE="github.com/duneanalytics/*,github.com/a-monteiro/*"
 # Fix for _p9k_worker_stop:5: failed to close file descriptor 13: bad file descriptor
 unset ZSH_AUTOSUGGEST_USE_ASYNC
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andre/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
